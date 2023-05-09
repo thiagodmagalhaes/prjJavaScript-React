@@ -1,7 +1,10 @@
 import './App.css'
 
 function App() {
-  return <div className='App'>  <h1>"TESTANDO "</h1>    </div>
+  function getCordentes(e: React.MouseEvent<HTMLElement>){
+    console.log(e);
+  }
+  return <div className='App' onClick={getCordentes}>   </div>
   
   }
 
