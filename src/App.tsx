@@ -13,12 +13,21 @@ function App() {
     setClickedPoints([...clickedPoints, {clientX,clientY}])
     console.log(clickedPoints);
   }
-  return <div className='App' onClick={getCordenates}>
+
+  function DesfazendoPonto(){
+    const newClickedPoint = [...clickedPoints]
+    newClickedPoint.pop
+    setClickedPoints(newClickedPoint)
+  }
+  return( 
+    <>
+    <button onClick={DesfazendoPonto}>Desfazer</button>
+    <div className='App' onClick={getCordenates}>
     {clickedPoints.map((clickedPoints)=>{
-      return <div 
+      return( <div 
         style={{
-          left: clickedPoints.clientX, 
-          top: clickedPoints.clientY,
+          left: clickedPoints.clientX-6, 
+          top: clickedPoints.clientY-6,
           position : 'absolute',
           borderRadius: '50%',
           background: 'red',
@@ -26,13 +35,14 @@ function App() {
           height: '10px',
         
         }}
-          
-      > 
-         
-      </div>
+      ></div>
+      )
 
     })}  </div>
+    </>
+  )
+}
   
- }
+ 
 
 export default App
