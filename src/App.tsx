@@ -7,6 +7,7 @@ interface ClickedProps {
 function App() {
 
   const [clickedPoints, setClickedPoints] = useState<ClickedProps[]>([])
+  const [undoPoints, setUndoPoints] = useState<ClickedProps[]>([])
   function getCordenates(e: React.MouseEvent<HTMLElement>){
     const { clientX , clientY }  = e 
 
@@ -16,12 +17,18 @@ function App() {
 
   function DesfazendoPonto(){
     const newClickedPoint = [...clickedPoints]
-    newClickedPoint.pop()
+    const undoPoint = newClickedPoint.pop()
     setClickedPoints(newClickedPoint)
+    if(!undoPoint) return
+      setUndoPoints([...undoPoints,undoPoint])
+  }
+  function RefazerPonto(){
+    
   }
   return( 
     <>
     <button disabled={clickedPoints.length===0} onClick={DesfazendoPonto}>Desfazer</button>
+    <button onClick={RefazerPonto}>Refazer</button>
     <div className='App' onClick={getCordenates}>
     {clickedPoints.map((clickedPoints, index)=>{
       return( <div 
