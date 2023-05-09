@@ -21,10 +21,11 @@ function App() {
   }
   return( 
     <>
-    <button onClick={DesfazendoPonto}>Desfazer</button>
+    <button disabled={clickedPoints.length===0} onClick={DesfazendoPonto}>Desfazer</button>
     <div className='App' onClick={getCordenates}>
-    {clickedPoints.map((clickedPoints)=>{
+    {clickedPoints.map((clickedPoints, index)=>{
       return( <div 
+        key={index}
         style={{
           left: clickedPoints.clientX-6, 
           top: clickedPoints.clientY-6,
