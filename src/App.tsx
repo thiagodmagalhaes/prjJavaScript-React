@@ -13,7 +13,21 @@ function App() {
     setClickedPoints([...clickedPoints, {clientX,clientY}])
     console.log(clickedPoints);
   }
-  return <div className='App' onClick={getCordenates}>  </div>
+  return <div className='App' onClick={getCordenates}>
+    {clickedPoints.map((clickedPoints)=>{
+      return <div 
+        style={{
+          left: clickedPoints.clientX, 
+          top: clickedPoints.clientY,
+          position : 'absolute',
+        
+        }}
+          
+      > 
+        0
+      </div>
+
+    })}  </div>
   
  }
 
