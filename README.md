@@ -1,6 +1,4 @@
 # prjJavaScript-React
-Trata-se de um exercício onde deve aparecer um círculo em cada lugar que o usuário clicar na tela. Além disto, é possível desfazer e refazer o último click.
-A resolução foi feita utilizando JavaScript, TypeScript, React e Node.
-Utilizei o Node para gerenciar e iniciar o código fonte do projeto.
-Criei um repositório para subir o projeto para github, através do git.
-Utilizei VSCode para edição e desenvolvimento do projeto.
+Este exercício consiste em criar uma funcionalidade que desenhe um círculo na tela cada vez que o usuário clicar em qualquer lugar. Além disso, é possível desfazer e refazer a última ação realizada pelo usuário. Para implementar essa solução, foram utilizadas as linguagens de programação JavaScript e TypeScript, bem como as bibliotecas React e Node.
+
+Para gerenciar e iniciar o código fonte do projeto, foi utilizado o Node.js, uma plataforma que permite a execução de código JavaScript no lado do servidor. Além disso, para hospedar o projeto, o desenvolvedor criou um repositório no Github, onde o código pode ser armazenado e gerenciado de maneira eficiente. Para facilitar a edição e desenvolvimento do projeto, foi utilizado o Visual Studio Code, um ambiente de desenvolvimento integrado (IDE).
