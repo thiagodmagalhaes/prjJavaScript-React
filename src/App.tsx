@@ -16,7 +16,7 @@ function App() {
 
   function DesfazendoPonto(){
     const newClickedPoint = [...clickedPoints]
-    newClickedPoint.pop
+    newClickedPoint.pop()
     setClickedPoints(newClickedPoint)
   }
   return( 
