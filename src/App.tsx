@@ -20,11 +20,15 @@ function App() {
           left: clickedPoints.clientX, 
           top: clickedPoints.clientY,
           position : 'absolute',
+          borderRadius: '50%',
+          background: 'red',
+          width: '10px',
+          height: '10px',
         
         }}
           
       > 
-        0
+         
       </div>
 
     })}  </div>
